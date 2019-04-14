@@ -16,7 +16,7 @@ namespace ExemplosPadrõesProjeto.Models.Moveis
     {
         protected override Cadeira CriarCadeira()
         {
-            throw new NotImplementedException();
+            return new CadeiraFuturista();
         }
 
         protected override Mesa CriarMesa()
@@ -28,5 +28,10 @@ namespace ExemplosPadrõesProjeto.Models.Moveis
         {
             return new ArmarioFuturista();
         }
-    }
+
+		protected override Poltrona CriarPoltrona()
+		{
+			return new PoltronaFuturista();
+		}
+	}
 }

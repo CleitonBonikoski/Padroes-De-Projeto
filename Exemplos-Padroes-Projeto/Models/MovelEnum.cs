@@ -11,7 +11,9 @@ namespace ExemplosPadrõesProjeto.Models
 {
     public enum MovelEnum
     {
-        Mesa, Cadeira,
-        Armario
+        Mesa,
+		Cadeira,
+        Armario, 
+		Poltrona
     }
 }

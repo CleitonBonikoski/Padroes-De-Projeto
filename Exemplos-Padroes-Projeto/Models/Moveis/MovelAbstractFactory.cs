@@ -23,13 +23,16 @@ namespace ExemplosPadrõesProjeto.Models.Moveis
                     return CriarMesa();
                 case MovelEnum.Armario:
                     return CriarArmario();
+				case MovelEnum.Poltrona:
+					return CriarPoltrona();
                 default:
                     return null;
             }
         }
 
-        protected abstract Mesa CriarMesa();
+		protected abstract Poltrona CriarPoltrona();
 
+		protected abstract Mesa CriarMesa();
 
         protected abstract Cadeira CriarCadeira();
 
@@ -49,6 +52,8 @@ namespace ExemplosPadrõesProjeto.Models.Moveis
                     return new MovelBarrocoFactory();
                 case EstiloEnum.Futurista:
                     return new MovelFuturistaFactory();
+				case EstiloEnum.Romano:
+					return new MovelRomanoFactory();
                 default:
                     throw new NotSupportedException("Estilo não especificado!");
             }
